@@ -23,20 +23,20 @@ Config.MedicBagItem            = "medicalbag"
 Config.HelpCommand             = "911"
 Config.RemoveItemsOnRespawn    = true
 
-Config.BaseInjuryReward        = 150 -- changes if the injury value is higher then 1
-Config.ReviveReward            = 700
+Config.BaseInjuryReward        = 200 -- changes if the injury value is higher then 1
+Config.ReviveReward            = 500
 
-Config.ParamedicTreatmentPrice = 4000
+Config.ParamedicTreatmentPrice = 15000
 Config.AllowAlways             = true        -- false if you want it to work only when there are only medics online
 
-Config.AmbulanceStretchers     = 2           -- how many stretchers should an ambunalce have
+Config.AmbulanceStretchers     = 2           -- how many stretchers should an ambulance have
 Config.ConsumeItemPerUse       = 10          -- every time you use an item it gets used by 10%
 
-Config.TimeToWaitForCommand    = 2           -- when player dies he needs to wait 2 minutes to do the ambulance command
+Config.TimeToWaitForCommand    = 1           -- when player dies he needs to wait 2 minutes to do the ambulance command
 Config.NpcReviveCommand        = "ambulance" -- this will work only when there are no medics online
 
 Config.UsePedToDepositVehicle  = false       -- if false the vehicle will instantly despawns
-Config.ExtraEffects            = true        -- false >> disables the screen shake and the black and white screen
+Config.ExtraEffects            = false        -- false >> disables the screen shake and the black and white screen
 
 Config.EmsVehicles             = {           -- vehicles that have access to the props (cones and ecc..)
 	'ambulance',
@@ -63,28 +63,28 @@ Config.Hospitals = {
 	["pillbox"] = {
 		paramedic = {
 			model = "s_m_m_scientist_01",
-			pos = vector4(312.0927, -596.1016, 42.2918, 338.7213),
+			pos = vector4(-837.17, -2102.93, 9.92, 314.19),
 		},
 		bossmenu = {
-			pos = vector3(284.84, -615.6, 44.24),
-			min_grade = 2
+			pos = vector3(-833.14, -2134.31, 16.5),
+			min_grade = 8
 		},
 		zone = {
-			pos = vec3(299.0, -585.28, 43.28),
+			pos = vec3(-878.46, -2113.01, 9.92),
 			size = vec3(200.0, 200.0, 200.0),
 		},
 		blip = {
 			enable = true,
-			name = 'Pillbox Hospital',
+			name = 'Rumah Sakit',
 			type = 61,
 			scale = 1.0,
 			color = 2,
-			pos = vector3(308.96, -591.52, 43.28),
+			pos = vector3(-865.24, -2121.33, 9.92),
 		},
 		respawn = {
 			{
-				bedPoint = vector4(349.76, -583.44, 43.0, 150.04),
-				spawnPoint = vector4(348.84, -583.36, 42.32, 68.24)
+				bedPoint = vector4(-848.08, -2113.68, 9.75, 312.02),
+				spawnPoint = vector4(-847.04, -2112.55, 9.92, 316.22)
 			},
 			-- {
 			-- 	bedPoint = vector4(346.96, -590.64, 44.12, 338.0),
@@ -97,9 +97,9 @@ Config.Hospitals = {
 				slots = 50,
 				weight = 50, -- kg
 				min_grade = 0,
-				label = 'Ems stash',
+				label = 'Ems Stash',
 				shared = true, -- false if you want to make everyone has a personal stash
-				pos = vector3(309.96, -599.2, 43.28)
+				pos = vector3(-846.43, -2086.23, 9.77)
 			}
 		},
 		pharmacy = {
@@ -107,14 +107,14 @@ Config.Hospitals = {
 				job = true,
 				label = "Pharmacy",
 				grade = 0, -- works only if job true
-				pos = vector3(315.5516, -598.6013, 43.2918),
+				pos = vector3(-854.48, -2112.23, 10.04),
 				blip = {
 					enable = false,
 					name = 'Pharmacy',
 					type = 61,
 					scale = 0.7,
 					color = 2,
-					pos = vector3(315.5516, -598.6013, 43.2918),
+					pos = vector3(-854.48, -2112.23, 10.04),
 				},
 				items = {
 					{ name = 'medicalbag',    price = 10 },
@@ -132,7 +132,7 @@ Config.Hospitals = {
 				grade = 0, -- works only if job true
 				pos = vector3(303.84, -597.6, 43.28),
 				blip = {
-					enable = true,
+					enable = false,
 					name = 'Pharmacy',
 					type = 61,
 					scale = 0.7,
